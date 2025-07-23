@@ -5,11 +5,19 @@ interface ButtonProps {
   callback: () => void;
   children: ReactNode;
   disabled?: boolean;
+  secondary?: boolean;
 }
 
-const Button: FC<ButtonProps> = ({ callback, children, disabled = false }) => {
+const Button: FC<ButtonProps> = ({
+  callback,
+  children,
+  disabled = false,
+  secondary = false,
+}) => {
+  const classNames = `button button--${secondary ? "secondary" : "primary"}`;
+
   return (
-    <button onClick={callback} disabled={disabled}>
+    <button className={classNames} onClick={callback} disabled={disabled}>
       {children}
     </button>
   );

@@ -1,2 +1,16 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 #root {
+}
+
+.ui-container {
+  margin: 0 auto;
+  width: 600px;
+  height: 800px;
+  padding: 24px;
+  background-color: #efefef;
 }
