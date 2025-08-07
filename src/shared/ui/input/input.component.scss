@@ -1,2 +1,58 @@
+.input-field {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+
+  svg {
+    position: absolute;
+    top: 6px;
+
+    // positioning in the .input selector
+  }
+
+  &--has-label {
+    svg {
+      top: 29px;
+    }
+  }
+}
+
 .input {
+  border: 1px solid colors.$gray-5;
+  color: colors.$gray-2;
+  outline: none;
+  padding: 8px 16px;
+  border-radius: 30px;
+
+  &::placeholder {
+    color: colors.$gray-3;
+  }
+
+  &:focus {
+    border-color: colors.$primary;
+    color: colors.$primary;
+  }
+
+  &--error {
+    border-color: colors.$error-2;
+    color: colors.$error-1;
+  }
+
+  &:disabled {
+    border-color: colors.$gray-6;
+    color: colors.$gray-5;
+  }
+
+  &--has-left-icon {
+    padding: 8px 16px 8px 48px;
+  }
+
+  &__left-icon {
+    left: 16px;
+  }
+
+  &__right-icon {
+    right: 16px;
+  }
 }
